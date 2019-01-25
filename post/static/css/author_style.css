@@ -1,0 +1,8 @@
+#perfil{}
+#perfil #name{}
+#posts{}
+#posts ul{}
+#posts ul li{border: 1px solid black;}
+#post ul li .post{
+    border: 1px solid black;
+}

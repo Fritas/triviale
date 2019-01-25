@@ -19,7 +19,7 @@
         <div id="authors">
             <h6> por
                 {% for author in authors %}
-                    {{ author.first_name }} {{ author.last_name }},
+                    <a href="{% url 'author' author.id %}">{{ author.first_name }} {{ author.last_name }}</a>,
                 {% endfor %}
             </h6>
         </div>
