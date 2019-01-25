@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Triviale - Contact{% endblock %}
+
+{% block section %}
+    <h4>Contact us</h4>
+    <ul>
+        <li>WhatsApp: {{ contact.whatsapp }}</li>
+        <li>E-mail: {{ contact.email }}</li>
+    </ul>
+{% endblock %}

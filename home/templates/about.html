@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Triviale{% endblock %}
+
+{% block section %}
+    <div>
+        <h3>The site</h3>
+        <p>{{ about.site }}</p>
+    </div>
+    <div>
+        <h3>Authors</h3>
+        <ul>
+            {% for author in about.authors %}
+                <li>
+                    <h4>{{ author.first_name }} {{ author.last_name }}</h4>
+                    <p>{{ author.bibliography }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h3>Contributors</h3>
+        <ul>
+            {% for contributor in about.contributors %}
+                <li>
+                    <h4>{{ contributor.first_name }} {{ contributor.last_name }}</h4>
+                    <p>{{ contributor.bibliography }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

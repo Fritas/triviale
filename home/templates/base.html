@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <title>{% block title %}Triviale{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+        <header>
+            {% block header %}
+                <div class="" id="header">
+                    <div id="header-left">
+                        <h1>Triviale</h1>
+                    </div>
+                    <div id="header-right-top">
+                        <p>Redes Sociais</p>
+                    </div>
+                    <div id="header-right-bottom">
+                        <h3>Triviale is a blog about all themes, but from a worldview!</h3>
+                    </div>
+                </div>
+            {% endblock %}
+        </header>
+        <nav>
+            {% block nav %}
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            {% endblock %}
+        </nav>
+        <section>
+            {% block section %}
+
+            {% endblock %}
+        </section>
+        <footer>
+            {% block footer %}
+                <h2>&copy;2019 Triviale</h2>
+            {% endblock %}
+        </footer>
+    {% endblock %}
+</body>
+</html>
