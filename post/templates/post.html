@@ -16,8 +16,23 @@
         <div id="subtitle">
             <h3>post.subtitle</h3>
         </div>
+        <div id="authors">
+            <h6> por
+                {% for author in authors %}
+                    {{ author.first_name }} {{ author.last_name }},
+                {% endfor %}
+            </h6>
+        </div>
         <div id="text">
             <p>{{ post.text }}</p>
         </div>
+    </div>
+    <div id="biographies">
+        {% for author in authors %}
+            <div class="author">
+                <h4>{{ author.first_name }} {{ author.last_name }}</h4>
+                <p>{{ author.bibliography }}</p>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
