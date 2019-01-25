@@ -1,0 +1,89 @@
+/* Var */
+:root {
+    --footer_height: 6em;
+}
+
+/* All */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+/* Header */
+    header{
+        border: 1px solid black;
+    }
+    #header {padding: 0 auto;}
+    #header #left{
+        text-align: center;
+        padding: 0;
+        margin: 0 auto;
+    }
+    #header #left #title {font-size: 4em;}
+    #header #right {}
+    #header #right #top{text-align: right;}
+    #header #right #bottom{text-align: center;}
+/* Nav */
+    nav{border: 1px solid black;}
+    #nav {
+        display: flex;
+        margin: auto;
+    }
+    #nav #left{}
+    #nav #left ul{}
+    #nav #left ul li{
+        display: inline-block;
+    }
+    #nav #right{
+        text-align: center;
+        margin: auto;
+    }
+    #nav #right input{}
+    #nav #right button{}
+
+
+/* Section */
+
+
+/* Article */
+
+
+/* Footer */
+    footer{
+        height: var(--footer_height);
+        border: 1px solid black;
+    }
+    #footer {}
+    #footer #copyright{
+        text-align: center;
+    }
+
+
+/* CONTENTs */
+    .wrapper {
+        min-height: calc(100% - var(--footer_height));
+    }
+    /*.push {
+        height: var(--footer_height);
+    }*/
+
+
+/* Others */
+    .selector-for-some-widget {
+        box-sizing: content-box;
+    }
+
+    /* para todas as div em uma row ter a mesma altura */
+    .row{
+        overflow: hidden;
+    }
+    [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
+    /* fim do codigo */

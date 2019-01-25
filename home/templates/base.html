@@ -6,42 +6,66 @@
         <meta charset="UTF-8">
         <title>{% block title %}Triviale{% endblock %}</title>
         <link rel="stylesheet" href="{% static 'css/style.css'%}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
     {% endblock %}
 </head>
 <body>
     {% block body %}
+        <div class="wrapper">
         <header>
             {% block header %}
-                <div class="" id="header">
-                    <div id="header-left">
-                        <h1>Triviale</h1>
+                <div class="container" id="header">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3" id="left">
+                        <h1 id="title">Triviale</h1>
                     </div>
-                    <div id="header-right-top">
-                        <p>Redes Sociais</p>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9" id="right">
+                        <div id="top">
+                            <p>Social Networks</p>
+                        </div>
+                        <div id="bottom">
+                            <h3>Triviale is a blog about all themes, but from a christy worldview!</h3>
+                        </div>
                     </div>
-                    <div id="header-right-bottom">
-                        <h3>Triviale is a blog about all themes, but from a worldview!</h3>
-                    </div>
+                </div>
                 </div>
             {% endblock %}
         </header>
         <nav>
             {% block nav %}
-                <ul>
-                    <li><a href="{% url 'index' %}">Home</a></li>
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
-                </ul>
+                <div class="container">
+                    <div class="row" id="nav">
+                        <div class="col-12 col-sm-12 col-md-7 col-lg-8 col-xl-8" id="left">
+                            <ul>
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4" id="right">
+                            <form>
+                                <input type="text" placeholder="search">
+                                <button type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             {% endblock %}
         </nav>
-        <section>
+        <section class="container">
             {% block section %}
 
             {% endblock %}
         </section>
+        </div>
+        <div class="push"></div>
         <footer>
             {% block footer %}
-                <h2>&copy;2019 Triviale</h2>
+                <div class="container">
+                <div id="footer">
+                    <h2 id="copyright">&copy;2019 Triviale</h2>
+                </div>
+                </div>
             {% endblock %}
         </footer>
     {% endblock %}
