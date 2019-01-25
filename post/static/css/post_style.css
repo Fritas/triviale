@@ -1,0 +1,29 @@
+#post #title{
+    text-align: center;
+}
+#post #subtitle{
+    text-align: center;
+}
+#post #authors{
+    text-align: center;
+    color: grey;
+}
+#post #text p{
+    text-align: justify;
+    text-indent:4em;
+}
+#biographies{
+    border: 1px solid black;
+    padding: 1em;
+}
+#biographies .author{
+    border-bottom: 1px solid black;
+    padding: 1em;
+}
+#biographies .author h4{
+    border-bottom: 1px solid grey;
+}
+#biographies .author p{
+    text-align: justify;
+    text-indent: 2em;
+}

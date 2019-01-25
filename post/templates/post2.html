@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/post_style.css' %}">
+{% endblock %}
+
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block section %}
+    <div id="post">
+        <div id="title">
+            <h2>{{ post.title }}</h2>
+        </div>
+        <div id="subtitle">
+            <h3>post.subtitle</h3>
+        </div>
+    <!--
+        <div id="authors">
+            <h6> por
+                {% for author in post.authors %}
+                    {{ author.first_name }} {{ author.last_name }},
+                {% endfor %}
+            </h6>
+        </div>
+     -->
+        <div id="text">
+            <p>{{ post.text }}</p>
+        </div>
+    </div>
+    <!---
+    <div id="biographies">
+        {% for author in post.authors %}
+            <div class="author">
+                <h4>{{ author.first_name }} {{ author.last_name }}</h4>
+                <p>{{ author.bibliography }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    -->
+{% endblock %}
