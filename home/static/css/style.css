@@ -1,3 +1,12 @@
+/* IMPORTs */
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
+@import url('https://fonts.googleapis.com/css?family=Rosarivo');
+@import url('https://fonts.googleapis.com/css?family=Cormorant');
+@import url('https://fonts.googleapis.com/css?family=Bellefair');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+
+
 /* Var */
 :root {
     --footer_height: 6em;
@@ -12,46 +21,93 @@ html, body {
       height: 100%;
       margin: 0;
     }
-
+.text-justify {
+    text-align: justify;
+}
 /* Header */
     header{
-        border: 1px solid black;
-    }
-    #header {padding: 0 auto;}
-    #header #left{
+        border-bottom: 1px solid black;
         text-align: center;
-        padding: 0;
+        margin: auto;
+        display: flex;
+    }
+    header ul{
+        text-align: center;
         margin: 0 auto;
     }
-    #header #left #title {font-size: 4em;}
-    #header #right {}
-    #header #right #top{text-align: right;}
-    #header #right #bottom{text-align: center;}
-/* Nav */
-    nav{border: 1px solid black;}
-    #nav {
-        display: flex;
-        margin: auto;
-    }
-    #nav #left{}
-    #nav #left ul{}
-    #nav #left ul li{
+    header ul li{
         display: inline-block;
+        padding: 0.2em;
+        text-align: center;
     }
-    #nav #left ul li a{
+    header ul li a{
         color: black;
         text-decoration: none;
     }
-    #nav #left ul li a:hover {
+    header ul li a:hover {
         text-decoration: underline;
     }
-    #nav #right{
+    header ul li a img{
+        width: 2em;
+        height: 2em;
+    }
+    header #left, 
+    header #center, 
+    header #right{
+        margin: auto;
         text-align: center;
+    }
+    header #title{
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 400;
+        font-style: normal;
+        src : url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+    }
+    #button-search {
+        border: none;
+    }
+
+    /* Nav */
+    nav {
+        display: flex;
         margin: auto;
     }
-    #nav #right input{}
-    #nav #right button{}
-
+    nav ul{
+        text-align: center;
+        margin: 0 auto;
+    }
+    nav ul li{
+        display: inline-block;
+        padding: 1em;
+        text-align: center;
+    }
+    .nav-link{
+        color: black;
+        text-decoration: none;
+    }
+    .nav-link:hover {
+        text-decoration: underline;
+    }
+    /* https://www.w3schools.com/css/css_dropdowns.asp */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+      
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    /* ---------------------------- */
 
 /* Section */
 
@@ -61,25 +117,21 @@ html, body {
 
 /* Footer */
     footer{
-
         border: 1px solid black;
-    }
-    #footer{
         height: var(--footer_height);
         display: flex;
         margin: auto;
     }
-    #footer div{
+    footer #center {
         text-align: center;
         margin: auto;
     }
-    #footer #left{}
-    #footer #center{        }
-    #footer #center #copyright{
 
-    }
-    #footer #right{}
+/* UL */
 
+.list-none {
+    list-style: none;
+}
 
 /* CONTENTs */
     .wrapper {

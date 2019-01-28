@@ -7,52 +7,98 @@
         <title>{% block title %}Triviale{% endblock %}</title>
         <link rel="stylesheet" href="{% static 'css/style.css'%}">
         <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
         {% block css %}{% endblock %}
     {% endblock %}
 </head>
 <body>
     {% block body %}
         <div class="wrapper">
+        
         <header>
             {% block header %}
-                <div class="container" id="header">
+                <div class="container">
                 <div class="row">
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3" id="left">
+                    <div class="col-4" id="left">
+                        <!-- https://www.iconfinder.com/iconsets/social-media-applications -->
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="{% static "img/iconfinder_social_media_applications_1-facebook_4102573.svg" %}">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="{% static "img/iconfinder_social_media_applications_2-youtube_4102578.svg" %}">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="{% static "img/iconfinder_social_media_applications_3-instagram_4102579.svg" %}">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="{% static "img/iconfinder_social_media_applications_23-whatsapp_4102606.svg" %}">
+                                </a>
+                            </li>
+                            
+                        </ul>
+
+                    </div>
+                    <div class="col-4" id="center">
                         <h1 id="title">Triviale</h1>
+                        <!--<p>Triviale is a blog about all themes, but from a christian worldview!</p>-->
                     </div>
-                    <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9" id="right">
-                        <div id="top">
-                            <p>Social Networks</p>
-                        </div>
-                        <div id="bottom">
-                            <h3>Triviale is a blog about all themes, but from a christian worldview!</h3>
-                        </div>
-                    </div>
+                    <div class="col-4" id="right">
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button id="button-search"><i type="submit" class="material-icons">search</i></button>
+                            </form>
+                            {% if user.is_authenticated %}    
+                                <a class="nav-link disabled" href="{#% url 'logout' %#}">Logout</a>
+                            {% else %}
+                                <a class="nav-link" href="{#% url 'login' %#}">Sign in</a>
+                            {% endif %}         
+                    </div>          
                 </div>
                 </div>
-            {% endblock %}
+        {% endblock %}
         </header>
-        <nav>
+    
+        <nav class="">
             {% block nav %}
                 <div class="container">
-                    <div class="row" id="nav">
-                        <div class="col-12 col-sm-12 col-md-7 col-lg-8 col-xl-8" id="left">
-                            <ul>
-                                <li><a href="{% url 'index' %}">Home</a></li>
-                                <li><a href="{% url 'about' %}">About</a></li>
-                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <ul class="">
+                        <li class="">
+                            <a class="nav-link" href="{% url 'index' %}">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            Posts
+                            <ul class="dropdown-content">
+                                <li>
+                                    <a class="nav-link" href="{#% url 'review' %#}">Reviews</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="{#% url 'convidados' %#}">Convidados</a>
+                                </li>
                             </ul>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4" id="right">
-                            <form>
-                                <input type="text" placeholder="search">
-                                <button type="submit">Search</button>
-                            </form>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="{% url 'about' %}">About</a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             {% endblock %}
         </nav>
+            
+
+            
         <section class="container">
             {% block section %}
 
@@ -63,13 +109,10 @@
         <footer>
             {% block footer %}
                 <div class="container">
-                <div class="row" id="footer">
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" id="left"></div>
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" id="center">
+                    <div id="center">
+                        <h4>Triviale is a blog about all themes, but from a christian worldview!</h4>
                         <p id="copyright">&copy; 2019 Triviale</p>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" id="right"></div>
-                </div>
                 </div>
             {% endblock %}
         </footer>

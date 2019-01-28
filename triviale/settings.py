@@ -30,6 +30,7 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 ALLOWED_HOSTS = [
     'django-triviale.herokuapp.com',
     'localhost',
+    '127.0.0.1'
 ]
 
 
