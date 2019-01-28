@@ -1,5 +1,4 @@
 /* IMPORTs */
-
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
 @import url('https://fonts.googleapis.com/css?family=Rosarivo');
 @import url('https://fonts.googleapis.com/css?family=Cormorant');
@@ -128,7 +127,6 @@ html, body {
     }
 
 /* UL */
-
 .list-none {
     list-style: none;
 }
